@@ -1,21 +1,35 @@
-import React, { useState } from 'react';
-
+import React, { useState, useContext } from 'react';
+import ThemeContext from '../context/ThemeContext';
 
 const Header = () => {
+   const [darkModo, setDarkModo] = useState(false);
    const [darkMode, setDarkMode] = useState(false);
 
+   const { color, updateColor } = useContext(ThemeContext)
+
+
    const handleClick = () => {
-    setDarkMode(!darkMode)
+    setDarkModo(!darkModo)
    }
+
+   //Función para cambiar el modo oscuro
+   const handleClickmode = () => {
+    setDarkMode(!darkMode)
+    color === "bg-light" ? updateColor ("bg-dark") : updateColor ("bg-light")
+   }
+
+
+
 
 
   return (
     <div className='Header'>
-        <h1>React Hooks</h1>
-        <button type='button' onClick={handleClick}>{darkMode ? 'Dark Mode' : 'Light Mode'}</button>
+      <button type='button' onClick={handleClickmode}>Cambiar Color </button>
+        <h1 style={{ color }}>React Hooks</h1>
+        <button type='button' onClick={handleClick}>{darkModo ? 'Dark Mode' : 'Light Mode'}</button>
 
         {/* Insertando una funcion anonima dentro del onclick sin necesidad de crear una función */}
-        <button type='button' onClick={() => setDarkMode(!darkMode)}>{darkMode ? 'Dark Mode2' : 'Light Mode2'}</button>
+        <button type='button' onClick={() => setDarkModo(!darkModo)}>{darkModo ? 'Dark Mode2' : 'Light Mode2'}</button>
     </div>
   )
 }
