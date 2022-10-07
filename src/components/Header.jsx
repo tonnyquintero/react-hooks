@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <div className='Header'>
       <button type='button' onClick={handleClickmode}>Cambiar Color </button>
-        <h1 style={{ color }}>React Hooks</h1>
+        <h1 style={{ color }}>React Hooks 🎣</h1>
         <button type='button' onClick={handleClick}>{darkModo ? 'Dark Mode' : 'Light Mode'}</button>
 
         {/* Insertando una funcion anonima dentro del onclick sin necesidad de crear una función */}

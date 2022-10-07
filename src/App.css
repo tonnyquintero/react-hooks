@@ -13,6 +13,14 @@
   }
 }
 
+.Search {
+  padding: 3em
+}
+
+input {
+  border-radius: 45px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -36,6 +44,13 @@
 .bg-dark {
   background-color: black;
   color: white;
+}
+
+.item-container {
+  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
 }
 
 @keyframes App-logo-spin {
