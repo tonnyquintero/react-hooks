@@ -24,7 +24,7 @@ const Header = () => {
 
   return (
     <div className='Header'>
-      <button type='button' onClick={handleClickmode}>Cambiar Color </button>
+      <button type='button' onClick={handleClickmode}>Cambiar el Color </button>
         <h1 style={{ color }}>React Hooks 🎣</h1>
         <button type='button' onClick={handleClick}>{darkModo ? 'Dark Mode' : 'Light Mode'}</button>
 
